@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.1/crypto-js.min.js"></script>
+    <script src="./JS/main.js"></script>
+    <title>Decodificador de texto</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho_menu">
+            <a class="cabecalho_menu_link" href="regraDoJogo.html" target="_self" >Regra do Jogo</a> 
+            <a class="cabecalho_menu_link" href="https://www.linkedin.com/in/roger-walter/" target="_blank" >Criador</a>
+        </nav>
+    </header>
+    <main class="corpo">
+        <section class="corpo_conteudo">
+            <textarea class="corpo_conteudo_texto" name="mensagem" id="mensagemOriginal" cols="30" rows="5" placeholder="Digite seu texto"></textarea>
+            <div class="corpo_botao_mensagem">
+                <p class="corpo_mensagem"><img class="incio_imagem" src="Imagens/ponto_de_esclamação.png" alt="Ponto de esclamação">Apenas letas minúsculas e sem acento</p>
+            </div>
+            <div class="corpo_botao">
+                <button class="corpo_botao_criptografar" onclick="criptografarMensagem()" id="Inicio_botao" >Criptografar</button>
+                <button class="corpo_botao_descriptografar" onclick="descriptografarMensagem()" id="Inicio_botao" >Descriptografar</button>
+            </div>
+        </section>
+        <div class="corpo_resultado">
+            <div id="corpo_resultado_verificacao">
+                <img class="corpo_resultado_imagem" src="Imagens/Nada Encontrado.jpg" alt="Pessoa procurando algo">
+                <h1 class="corpo_resultado_titulo">Nenhuma mensagem encontrada</h1>
+                <p class="corpo_resultado_paragrafo">Digite um texto que você deseja criptografar ou descripitografar.</p>
+            </div>
+            <p id="corpo_resultado_texto" class="corpo_resultado_texto" data-encrypted="c29tZSBub25l"></p>
+            <button onclick="copiarMensagem()" id="copiar" class="corpo_resultado_copiar">Copiar</button>
+        </div>
+        
+    </main>
+    <Footer class="rodape">
+        <p>Roger W.</p>
+    </Footer>
+</body>
+</html>
